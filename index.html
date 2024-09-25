@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tembakan Spesial</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Aku Punya Pertanyaan Buat Kamu</h1>
+      <p>
+        Eh btw kita udah lumayan dekat, nah dari itu aku selalu nyaman setiap
+        kali sama kamu wkwk. Jadi, aku merasa hubungan kita ini lebih dari
+        sekadar teman, dan aku pengen kita bawa ke tahap yang lebih serius.
+        Gimana kalau kita resmi jadian?
+      </p>
+      <button onclick="showYes()">Iya</button>
+      <button onclick="showNo()">Enggak</button>
+
+      <div id="yesMessage" class="hidden">
+        <h2>Yay!</h2>
+        <p>
+          Senang banget! Terimakasih ya udah terima,
+          <strong>aku janji akan selalu ada buat kamu</strong>! ❤️
+        </p>
+      </div>
+
+      <div id="noMessage" class="hidden">
+        <h2>Oh tidak!</h2>
+        <p>
+          Gak apa-apa, aku akan tetap menghargai keputusan kamu, dan semoga kita
+          tetap bisa berteman!
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function showYes() {
+        document.getElementById("yesMessage").classList.remove("hidden");
+        document.getElementById("noMessage").classList.add("hidden");
+      }
+
+      function showNo() {
+        document.getElementById("noMessage").classList.remove("hidden");
+        document.getElementById("yesMessage").classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>
